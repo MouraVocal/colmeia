@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import HoneyCombSvg from '../../assets/honeycomb.svg'
 
 export const Container = styled.div`
-  background: #2b2b2b;
+  background: ${({ theme }) => theme.colors.background};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@ export const Container = styled.div`
 export const HexGrid = styled.div`
   height: 100vh;
   width: 100vw;
-  background: #232323;
+  background: ${({ theme }) => theme.colors.background};
 `
 
 export const Grid = styled.div`
@@ -37,7 +37,7 @@ export const Light = styled.div`
   height: 15rem;
   border-radius: 50%;
   filter: blur(15px);
-  background: radial-gradient(circle, #7623bd 30%, #7623bd 0%);
+  background: ${({ theme }) => theme.colors.secondary};
   z-index: 0;
 `
 
