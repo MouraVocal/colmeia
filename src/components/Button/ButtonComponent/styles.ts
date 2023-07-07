@@ -13,6 +13,15 @@ export const StyledButton = styled.button`
   font-weight: ${({ theme }) => theme.fontWeights.semibold};
   padding: 1.2rem 1.6rem;
   border-radius: 0.4rem;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.darkPrimary};
+  }
+
+  &:active {
+    background-color: ${({ theme }) => theme.colors.opacityPrimary};
+  }
 `
 
 export const StyledTitle = styled.span`
