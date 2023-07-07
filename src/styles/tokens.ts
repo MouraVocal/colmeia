@@ -1,13 +1,20 @@
 export const colors = {
   primary: '#FFCE38',
   secondary: '#9900CC',
-  background: '#232323'
+  background: '#232323',
+  black: '#000000',
+  white: '#FFFFFF',
+  gray800: '#202024',
+  gray400: '#7C7C8A',
+  gray100: '#E1E1E6'
 }
 
 export const fontSize = {
-  small: '1.2rem',
-  medium: '1.6rem',
-  large: '2.4rem'
+  xs: '1.4rem',
+  small: '1.6rem',
+  regular: '1.8rem',
+  large: '2rem',
+  xl: '3.6rem'
 }
 
 export const fontWeights = {

@@ -1,7 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
-import { colors, fontSize, fontWeights, gradients } from './tokens'
+import * as Tokens from './tokens'
 
 export default createGlobalStyle`
+  :root {
+    font-size: 62.5%;
+  }
+
   * {
     padding: 0;
     margin: 0;
@@ -10,6 +14,7 @@ export default createGlobalStyle`
 
   body {
     font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
   }
 
   button {
@@ -17,9 +22,4 @@ export default createGlobalStyle`
   }
 `
 
-export const theme = {
-  colors,
-  fontSize,
-  gradients,
-  fontWeights
-}
+export const theme = Tokens
