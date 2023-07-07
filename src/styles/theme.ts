@@ -14,7 +14,7 @@ export default createGlobalStyle`
 
   body {
     font-family: 'Inter', sans-serif;
-    font-size: 1.6rem;
+    font-size: ${({ theme }) => theme.fontSizes.small};
   }
 
   button {

@@ -9,7 +9,7 @@ export const StyledButton = styled.button`
   background-color: ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.black};
   width: 100%;
-  font-size: ${({ theme }) => theme.fontSize.small};
+  font-size: ${({ theme }) => theme.fontSizes.small};
   font-weight: ${({ theme }) => theme.fontWeights.semibold};
   padding: 1.2rem 1.6rem;
   border-radius: 0.4rem;

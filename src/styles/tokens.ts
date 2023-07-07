@@ -9,7 +9,7 @@ export const colors = {
   gray100: '#E1E1E6'
 }
 
-export const fontSize = {
+export const fontSizes = {
   xs: '1.4rem',
   small: '1.6rem',
   regular: '1.8rem',

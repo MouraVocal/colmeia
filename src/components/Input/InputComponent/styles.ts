@@ -8,7 +8,7 @@ export const StyledInput = styled.input`
   background: ${({ theme }) => theme.colors.gray800};
   outline: none;
   color: ${({ theme }) => theme.colors.gray100};
-  font-size: ${({ theme }) => theme.fontSize.xs};
+  font-size: ${({ theme }) => theme.fontSizes.xs};
 
   &::placeholder {
     caret-color: ${({ theme }) => theme.colors.primary};
