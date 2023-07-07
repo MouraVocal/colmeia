@@ -1,14 +1,14 @@
 import { HoneyCombBackground } from './templates/HoneyCombBackground'
 import GlobalStyle, { theme } from './styles/theme'
 import { ThemeProvider } from 'styled-components'
-import { ReactComponent as SambaLogo } from './assets/samba-logo.svg'
+import { LoginForm } from './components/LoginForm'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <HoneyCombBackground>
-        <SambaLogo />
+        <LoginForm />
       </HoneyCombBackground>
     </ThemeProvider>
   )

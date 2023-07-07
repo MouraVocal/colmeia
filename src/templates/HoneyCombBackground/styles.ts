@@ -44,7 +44,8 @@ export const Light = styled.div`
 export const Content = styled.div`
   position: relative;
   z-index: 2;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
 `
