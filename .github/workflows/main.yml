@@ -24,10 +24,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Retrieve Git username
+        id: git_username
+        run: echo "::set-output name=username::$(git log -1 --pretty=format:%an)"
+
+      - name: Retrieve Git email
+        id: git_email
+        run: echo "::set-output name=email::$(git log -1 --pretty=format:%ae)"
+
       - name: Set Git Credentials
         run: |
-          git config --global user.name "${{env.GITHUB_ACTOR}}"
-          git config --global user.email "${{env.GITHUB_EMAIL}}"
+          git config --global user.name "${{ steps.git_username.outputs.username }}"
+          git config --global user.email "${{ steps.git_email.outputs.email }}"
 
       - name: Build
         run: npm run build
