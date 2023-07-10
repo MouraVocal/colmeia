@@ -1,44 +1,39 @@
-name: Deploy to GitHub Pages
-
+name: Deploy
 on:
   push:
     branches:
       - master
-
 jobs:
-  deploy:
+  build:
+    name: Build
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v3
-
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
       - name: Install dependencies
-        run: npm ci
-
-      - name: Retrieve Git username
-        id: git_username
-        run: echo "::set-output name=username::$(git log -1 --pretty=format:%an)"
-
-      - name: Retrieve Git email
-        id: git_email
-        run: echo "::set-output name=email::$(git log -1 --pretty=format:%ae)"
-
-      - name: Set Git Credentials
-        run: |
-          git config --global user.name "${{ steps.git_username.outputs.username }}"
-          git config --global user.email "${{ steps.git_email.outputs.email }}"
-
-      - name: Build
+        uses: bahmutov/npm-install@v1
+      - name: Build project
         run: npm run build
-
-      - name: Deploy to Github Pages
-        run: npm run deploy
+      - name: Upload production-ready build files
+        uses: actions/upload-artifact@v3
+        with:
+          name: production-files
+          path: ./dist
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: production-files
+          path: ./dist
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
