@@ -6,9 +6,10 @@ export const colors = {
   background: '#232323',
   black: '#000000',
   white: '#FFFFFF',
-  gray800: '#202024',
+  gray100: '#E1E1E6',
+  gray200: '#C4C4CC',
   gray400: '#7C7C8A',
-  gray100: '#E1E1E6'
+  gray800: '#202024'
 }
 
 export const fontSizes = {

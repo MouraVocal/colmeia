@@ -2,6 +2,7 @@ import { FormEvent, useState } from 'react'
 import { Input } from '../Input'
 import { Container, StyledSambaLogo, StyledButton } from './styles'
 import { Button } from '../Button'
+import { Checkbox } from '../Checkbox'
 
 export const LoginForm = () => {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false)
@@ -48,11 +49,12 @@ export const LoginForm = () => {
         </Input.Root>
       </Input.Wrapper>
 
-      <Button.Component
-        type="submit"
-        title="Entrar"
-        tabIndex={4}
-      ></Button.Component>
+      <Checkbox.Wrapper>
+        <Checkbox.Container id="remember-me" tabIndex={4} />
+        <Checkbox.Label htmlFor="remember-me">Lembrar-me</Checkbox.Label>
+      </Checkbox.Wrapper>
+
+      <Button.Component type="submit" title="Entrar" tabIndex={5} />
     </Container>
   )
 }
