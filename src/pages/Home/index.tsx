@@ -5,7 +5,7 @@ export const Home = () => {
   const navigate = useNavigate()
   return (
     <div>
-      <StyledBee onClick={() => navigate('/')} />
+      <StyledBee onClick={() => navigate('/colmeia/')} />
     </div>
   )
 }

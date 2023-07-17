@@ -21,7 +21,7 @@ export const LoginForm = () => {
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    navigate('/home')
+    navigate('/colmeia/home')
   }
 
   return (

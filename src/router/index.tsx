@@ -4,11 +4,11 @@ import { Home } from '../pages/Home'
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/colmeia',
     element: <Login />
   },
   {
-    path: '/home',
+    path: '/colmeia/home',
     element: <Home />
   }
 ])
