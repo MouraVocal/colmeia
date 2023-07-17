@@ -5,7 +5,7 @@ import { ErrorPage } from '../pages/Error'
 
 export const router = createBrowserRouter([
   {
-    path: '/colmeia',
+    path: '/',
     element: <Login />,
     errorElement: <ErrorPage />
   },
