@@ -1,6 +1,13 @@
 import { FormEvent, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Input } from '../Input'
-import { Container, StyledSambaLogo, StyledButton } from './styles'
+import {
+  Container,
+  StyledSambaLogo,
+  StyledButton,
+  StyledTitle,
+  StyledLink
+} from './styles'
 import { Button } from '../Button'
 import { Checkbox } from '../Checkbox'
 
@@ -10,13 +17,21 @@ export const LoginForm = () => {
     setIsPasswordVisible(!isPasswordVisible)
   }
 
+  const navigate = useNavigate()
+
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    navigate('/home')
   }
 
   return (
     <Container onSubmit={onSubmit}>
       <StyledSambaLogo />
+      <StyledTitle>
+        Colmeia
+        <br />
+        Recebendo e nutrindo nossas abelhas
+      </StyledTitle>
       <Input.Wrapper>
         <Input.Label htmlFor="email">E-mail</Input.Label>
         <Input.Root>
@@ -55,6 +70,10 @@ export const LoginForm = () => {
       </Checkbox.Wrapper>
 
       <Button.Component type="submit" title="Entrar" tabIndex={5} />
+
+      <StyledLink href="#" tabIndex={6}>
+        Esqueceu sua senha?
+      </StyledLink>
     </Container>
   )
 }
