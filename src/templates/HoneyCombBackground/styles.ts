@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import HoneyCombSvg from '../../assets/honeycomb.svg'
+import HoneyCombSvg from '../../assets/honeycomb-background.svg'
 
 export const Container = styled.div`
   background: ${({ theme }) => theme.colors.background};
