@@ -10,11 +10,13 @@ import {
 } from 'lucide-react'
 
 export const StyledCircle = styled.div`
+  aspect-ratio: 1;
   position: relative;
   align-items: center;
   justify-content: center;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  max-width: 600px;
+  margin: 4rem;
   border-radius: 50%;
 `
 

@@ -22,6 +22,11 @@ export const Home = () => {
     if (circle) {
       setDiameter(circle.getBoundingClientRect().width)
     }
+    window.addEventListener('resize', () => {
+      if (circle) {
+        setDiameter(circle.getBoundingClientRect().width)
+      }
+    })
   }, [])
 
   const navigate = useNavigate()
