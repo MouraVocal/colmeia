@@ -16,7 +16,7 @@ export const StyledCircle = styled.div`
   justify-content: center;
   width: 100%;
   max-width: 600px;
-  margin: 4rem;
+  margin: 10rem;
   border-radius: 50%;
 `
 

@@ -21,12 +21,16 @@ export const Home = () => {
     const circle = circleRef.current
     if (circle) {
       setDiameter(circle.getBoundingClientRect().width)
-    }
-    window.addEventListener('resize', () => {
-      if (circle) {
+      window.addEventListener('resize', () => {
         setDiameter(circle.getBoundingClientRect().width)
+      })
+
+      return () => {
+        window.removeEventListener('resize', () => {
+          setDiameter(circle.getBoundingClientRect().width)
+        })
       }
-    })
+    }
   }, [])
 
   const navigate = useNavigate()
@@ -75,7 +79,6 @@ export const Home = () => {
         y: radius * Math.sin(angle * i)
       })
     }
-    console.log(positions)
     return positions
   }
 
