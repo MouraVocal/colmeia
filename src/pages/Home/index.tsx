@@ -30,32 +30,32 @@ export const Home = () => {
     {
       title: 'Home',
       icon: <StyledHomeIcon />,
-      path: 'colmeia/home'
+      path: '/colmeia'
     },
     {
       title: 'Links Importantes',
       icon: <StyledLinkIcon />,
-      path: 'colmeia/links-importantes'
+      path: '/colmeia/links-importantes'
     },
     {
       title: 'Comunidades',
       icon: <StyledCommunitiesIcon />,
-      path: 'colmeia/comunidades'
+      path: '/colmeia/comunidades'
     },
     {
       title: 'Jogos',
       icon: <StyledGamesIcon />,
-      path: 'colmeia/jogos'
+      path: '/colmeia/jogos'
     },
     {
       title: 'Planos de fundo',
       icon: <StyledBackgroundImagesIcon />,
-      path: 'colmeia/planos-de-fundo'
+      path: '/colmeia/planos-de-fundo'
     },
     {
       title: 'Times',
       icon: <StyledTeamsIcon />,
-      path: 'colmeia/times'
+      path: '/colmeia/times'
     }
   ]
 
@@ -66,8 +66,8 @@ export const Home = () => {
 
     for (let i = 0; i < array.length; i++) {
       positions.push({
-        x: radius * Math.round(Math.cos(angle * i)),
-        y: radius * Math.round(Math.sin(angle * i))
+        x: radius * Math.cos(angle * i),
+        y: radius * Math.sin(angle * i)
       })
     }
     console.log(positions)
