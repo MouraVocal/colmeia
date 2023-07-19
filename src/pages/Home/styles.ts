@@ -13,8 +13,8 @@ export const StyledCircle = styled.div`
   position: relative;
   align-items: center;
   justify-content: center;
-  width: 70vh;
-  height: 70vh;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
 `
 

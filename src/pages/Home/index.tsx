@@ -1,3 +1,4 @@
+import { useRef, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   StyledBackgroundImagesIcon,
@@ -13,6 +14,16 @@ import { ICirclePosition, ISectionButtonProps } from './types'
 import { SectionButton } from '../../components/SectionButton'
 
 export const Home = () => {
+  const [diameter, setDiameter] = useState(0)
+  const circleRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const circle = circleRef.current
+    if (circle) {
+      setDiameter(circle.getBoundingClientRect().width)
+    }
+  }, [])
+
   const navigate = useNavigate()
 
   const sections: ISectionButtonProps[] = [
@@ -55,14 +66,15 @@ export const Home = () => {
 
     for (let i = 0; i < array.length; i++) {
       positions.push({
-        x: radius * Math.round(Math.cos(angle * i) * 100),
-        y: radius * Math.round(Math.sin(angle * i) * 100)
+        x: radius * Math.round(Math.cos(angle * i)),
+        y: radius * Math.round(Math.sin(angle * i))
       })
     }
+    console.log(positions)
     return positions
   }
 
-  const myPositions = circlePositions(sections, 6)
+  const myPositions = circlePositions(sections, diameter)
 
   const handleClickSectionButton = (path: string) => {
     console.log(path)
@@ -70,11 +82,12 @@ export const Home = () => {
   }
 
   return (
-    <StyledCircle>
+    <StyledCircle ref={circleRef}>
       {sections.map((section, index) => (
         <SectionButton
           x={myPositions[index].x}
           y={myPositions[index].y}
+          diameter={diameter}
           onClick={() => handleClickSectionButton(section.path)}
           key={section.title}
         >
