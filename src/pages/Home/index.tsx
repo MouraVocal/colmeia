@@ -82,10 +82,9 @@ export const Home = () => {
     return positions
   }
 
-  const myPositions = circlePositions(sections, diameter)
+  const sectionButtonPositions = circlePositions(sections, diameter)
 
   const handleClickSectionButton = (path: string) => {
-    console.log(path)
     navigate(path)
   }
 
@@ -93,8 +92,8 @@ export const Home = () => {
     <StyledCircle ref={circleRef}>
       {sections.map((section, index) => (
         <SectionButton
-          x={myPositions[index].x}
-          y={myPositions[index].y}
+          x={sectionButtonPositions[index].x}
+          y={sectionButtonPositions[index].y}
           diameter={diameter}
           onClick={() => handleClickSectionButton(section.path)}
           key={section.title}
