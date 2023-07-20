@@ -37,9 +37,9 @@ export const Home = () => {
 
   const sections: ISectionButtonProps[] = [
     {
-      title: 'Home',
+      title: 'Dashboard',
       icon: <StyledHomeIcon />,
-      path: '/colmeia'
+      path: '/colmeia/dashboard'
     },
     {
       title: 'Links Importantes',
