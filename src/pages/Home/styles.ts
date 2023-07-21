@@ -1,13 +1,5 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { ReactComponent as Bee } from '../../assets/bee.svg'
-import {
-  Gamepad2,
-  HomeIcon,
-  Image,
-  Link,
-  MessageSquare,
-  Users
-} from 'lucide-react'
 
 export const StyledCircle = styled.div`
   aspect-ratio: 1;
@@ -18,36 +10,6 @@ export const StyledCircle = styled.div`
   max-width: 600px;
   margin: 10rem;
   border-radius: 50%;
-`
-
-const buttonIconCommonStyles = css`
-  position: absolute;
-  fill: none;
-  stroke: white;
-`
-
-export const StyledHomeIcon = styled(HomeIcon)`
-  ${buttonIconCommonStyles}
-`
-
-export const StyledLinkIcon = styled(Link)`
-  ${buttonIconCommonStyles}
-`
-
-export const StyledCommunitiesIcon = styled(MessageSquare)`
-  ${buttonIconCommonStyles}
-`
-
-export const StyledGamesIcon = styled(Gamepad2)`
-  ${buttonIconCommonStyles}
-`
-
-export const StyledBackgroundImagesIcon = styled(Image)`
-  ${buttonIconCommonStyles}
-`
-
-export const StyledTeamsIcon = styled(Users)`
-  ${buttonIconCommonStyles}
 `
 
 export const StyledBee = styled(Bee)`

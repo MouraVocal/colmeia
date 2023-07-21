@@ -1,3 +1,10 @@
+import { DashboardTemplate } from '../../templates/DashboardTemplate'
+import { Outlet } from 'react-router-dom'
+
 export const Dashboard = () => {
-  return <h1>Dashboard</h1>
+  return (
+    <DashboardTemplate>
+      <Outlet />
+    </DashboardTemplate>
+  )
 }

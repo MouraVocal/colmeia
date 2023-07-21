@@ -1,17 +1,10 @@
 import { useRef, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import {
-  StyledBackgroundImagesIcon,
-  StyledBee,
-  StyledCircle,
-  StyledCommunitiesIcon,
-  StyledGamesIcon,
-  StyledHomeIcon,
-  StyledLinkIcon,
-  StyledTeamsIcon
-} from './styles'
-import { ICirclePosition, ISectionButtonProps } from './types'
+import { StyledBee, StyledCircle } from './styles'
+import { ICirclePosition } from './types'
 import { SectionButton } from '../../components/SectionButton'
+import { sections } from '../../commons'
+import { ISectionButtonProps } from '../../commons/types'
 
 export const Home = () => {
   const [diameter, setDiameter] = useState(0)
@@ -34,39 +27,6 @@ export const Home = () => {
   }, [])
 
   const navigate = useNavigate()
-
-  const sections: ISectionButtonProps[] = [
-    {
-      title: 'Dashboard',
-      icon: <StyledHomeIcon />,
-      path: '/colmeia/dashboard'
-    },
-    {
-      title: 'Links Importantes',
-      icon: <StyledLinkIcon />,
-      path: '/colmeia/links-importantes'
-    },
-    {
-      title: 'Comunidades',
-      icon: <StyledCommunitiesIcon />,
-      path: '/colmeia/comunidades'
-    },
-    {
-      title: 'Jogos',
-      icon: <StyledGamesIcon />,
-      path: '/colmeia/jogos'
-    },
-    {
-      title: 'Planos de fundo',
-      icon: <StyledBackgroundImagesIcon />,
-      path: '/colmeia/planos-de-fundo'
-    },
-    {
-      title: 'Times',
-      icon: <StyledTeamsIcon />,
-      path: '/colmeia/times'
-    }
-  ]
 
   const circlePositions = (array: ISectionButtonProps[], diameter: number) => {
     const radius = diameter / 2

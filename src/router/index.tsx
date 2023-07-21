@@ -7,6 +7,7 @@ import { Jogos } from '../pages/Jogos'
 import { PlanosDeFundo } from '../pages/PlanosDeFundo'
 import { Times } from '../pages/Times'
 import { Dashboard } from '../pages/Dashboard'
+import { DashboardProfile } from '../pages/DashboardProfile'
 
 export const router = createBrowserRouter([
   {
@@ -18,27 +19,33 @@ export const router = createBrowserRouter([
     element: <Home />
   },
   {
-    element: <LinksImportantes />,
-    path: '/colmeia/links-importantes'
-  },
-  {
-    element: <Comunidades />,
-    path: '/colmeia/comunidades'
-  },
-  {
-    element: <Jogos />,
-    path: '/colmeia/jogos'
-  },
-  {
-    element: <PlanosDeFundo />,
-    path: '/colmeia/planos-de-fundo'
-  },
-  {
-    element: <Times />,
-    path: '/colmeia/times'
-  },
-  {
     element: <Dashboard />,
-    path: '/colmeia/dashboard'
+    path: '/colmeia/dashboard',
+    children: [
+      {
+        element: <DashboardProfile />,
+        path: '/colmeia/dashboard/profile'
+      },
+      {
+        element: <LinksImportantes />,
+        path: '/colmeia/dashboard/links-importantes'
+      },
+      {
+        element: <Comunidades />,
+        path: '/colmeia/dashboard/comunidades'
+      },
+      {
+        element: <Jogos />,
+        path: '/colmeia/dashboard/jogos'
+      },
+      {
+        element: <PlanosDeFundo />,
+        path: '/colmeia/dashboard/planos-de-fundo'
+      },
+      {
+        element: <Times />,
+        path: '/colmeia/dashboard/times'
+      }
+    ]
   }
 ])
