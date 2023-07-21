@@ -5,8 +5,11 @@ export const DashboardTemplateContainer = styled.div`
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  border-radius: 10px;
   padding: 4.3rem 3.3rem 0 0;
+
+  @media (max-height: 800px) {
+    padding: 2rem 2rem 0 0;
+  }
 `
 
 export const DashboardMainContainer = styled.div`

@@ -8,6 +8,7 @@ export const Container = styled.div`
   border-radius: 1rem;
   padding: 1.4rem 2.7rem;
   width: 33.9rem;
+  margin-left: 1rem;
 `
 
 export const StyledInput = styled.input`

@@ -9,8 +9,10 @@ export const StyledLink = styled(NavLink)`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   border-radius: 0.5rem;
-  width: 5.6rem;
-  height: 5.8rem;
+  max-width: 5.6rem;
+  max-height: 5.8rem;
+  min-width: 3.5rem;
+  min-height: 3.5rem;
 
   &.active {
     background-color: ${({ theme }) => theme.colors.darkPrimary};
