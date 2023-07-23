@@ -1,27 +1,23 @@
 import styled from 'styled-components'
+import { IDashboardTemplateContentProps } from './types'
 
 export const DashboardTemplateContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  padding: 4.3rem 3.3rem 0 0;
-
-  @media (max-height: 800px) {
-    padding: 2rem 2rem 0 0;
-  }
 `
 
 export const DashboardMainContainer = styled.div`
   display: flex;
-  width: 100%;
-  height: 100%;
 `
 
-export const DashboardTemplateContent = styled.main`
+export const DashboardTemplateContent = styled.main<IDashboardTemplateContentProps>`
   display: flex;
-  width: 100%;
-  border-radius: 10px;
-  align-items: center;
-  justify-content: center;
+  height: ${({ headerHeight }) => `calc(100vh - ${headerHeight}px)`};
+  gap: 2rem;
+  overflow-y: scroll;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 0 2.2rem 2rem;
 `

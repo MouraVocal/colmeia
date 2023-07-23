@@ -14,7 +14,19 @@ export default createGlobalStyle`
 
   body {
     font-family: 'Inter', sans-serif;
-    font-size: ${({ theme }) => theme.fontSizes.small};
+    font-size: ${({ theme }) => theme.fontSizes.small};    
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar {
+      width: 1rem;
+      background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+      background: ${({ theme }) => theme.colors.gray600};
+      border-radius: 1rem;
   }
 
   button {

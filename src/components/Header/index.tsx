@@ -1,11 +1,15 @@
 import { StyledHeader, StyledTitle } from './styles'
 import { SearchInput } from '../SearchInput'
+import { HTMLAttributes, forwardRef } from 'react'
 
-export const Header = () => {
+export const Header = forwardRef<
+  HTMLHeadElement,
+  HTMLAttributes<HTMLHeadElement>
+>(({ ...rest }, ref) => {
   return (
-    <StyledHeader>
+    <StyledHeader ref={ref} {...rest}>
       <StyledTitle>Colmeia</StyledTitle>
       <SearchInput />
     </StyledHeader>
   )
-}
+})

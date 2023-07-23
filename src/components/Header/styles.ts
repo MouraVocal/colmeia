@@ -4,7 +4,7 @@ export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2.2rem;
+  padding: 2.2rem;
 `
 
 export const StyledTitle = styled.h1`

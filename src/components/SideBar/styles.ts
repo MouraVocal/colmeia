@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 export const StyledNav = styled.nav`
   display: flex;
-  height: 100%;
 `
 
 export const StyledUl = styled.ul`

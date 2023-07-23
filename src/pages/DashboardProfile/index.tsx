@@ -1,3 +1,9 @@
+import { CardTemplate } from '../../templates/CardTemplate'
+
 export const DashboardProfile = () => {
-  return <h1>DashboardProfile</h1>
+  return (
+    <>
+      <CardTemplate>DashboardProfile</CardTemplate>
+    </>
+  )
 }
