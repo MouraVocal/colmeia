@@ -16,6 +16,8 @@ export const DashboardTemplate = ({ children }: IDashboardTemplateProps) => {
 
     if (!headerHeight) return
 
+    setHeaderHeight(headerHeight)
+
     const resizeListener = () => {
       setHeaderHeight(headerHeight)
     }
