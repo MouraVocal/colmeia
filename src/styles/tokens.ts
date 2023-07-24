@@ -7,9 +7,11 @@ export const colors = {
   background: '#232323',
   black: '#000000',
   white: '#FFFFFF',
-  gray100: '#E1E1E6',
-  gray200: '#C4C4CC',
+  gray100: '#EAE2E2',
+  gray200: '#E1E1E6',
+  gray300: '#C4C4CC',
   gray400: '#7C7C8A',
+  gray500: '#534E4E',
   gray600: '#3E3A3A',
   gray800: '#202024'
 }
